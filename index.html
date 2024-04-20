@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Transfer 90% of Balance</title>
+</head>
+<body>
+    <button onclick="transferFunds()">Transfer Funds</button>
+    <script>
+        function transferFunds() {
+            fetch('/transfer', { method: 'POST' })
+                .then(response => response.json())
+                .then(data => console.log('Transaction sent:', data))
+                .catch(error => console.error('Error:', error));
+        }
+    </script>
+</body>
+</html>
